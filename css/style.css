@@ -1,1 +1,38 @@
 /* Denna fil skall innehålla din CSS kod */
+
+#wrapper{
+    display: grid;
+    grid-template-rows: 50px 25px 300px auto;
+    grid-template-columns: 4fr 6fr 4fr;
+    grid-gap: 15px;
+    border: solid 1px black;  
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    grid-template-areas:
+    "hd hd hd"
+    "ma as as"
+    "ma as as"
+    "ft ft ft";
+}
+
+header{
+    grid-area: hd;
+    text-align: center;
+    background-color: aqua;
+}
+
+main{
+    grid-area: ma;
+    background-color: pink;
+}
+
+aside{
+    grid-area: as;
+    background-color:greenyellow;
+}
+
+footer{
+    grid-area: ft;
+    background-color: blue;
+}
