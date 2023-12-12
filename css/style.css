@@ -2,37 +2,72 @@
 
 #wrapper{
     display: grid;
-    grid-template-rows: 50px 25px 300px auto;
-    grid-template-columns: 4fr 6fr 4fr;
+    grid-template-rows: 50px 5px 400px 400px;
+    grid-template-columns: 2fr 1.5fr;
     grid-gap: 15px;
     border: solid 1px black;  
     width: 90vw;
     height: 100vh;
     margin: auto;
     grid-template-areas:
-    "hd hd hd"
-    "ma as as"
-    "ma as as"
-    "ft ft ft";
+    "hd hd"
+    "ma as"
+    "ma as"
+    "ft ft";
 }
 
 header{
     grid-area: hd;
-    text-align: center;
-    background-color: aqua;
+    text-align: left;
 }
 
 main{
     grid-area: ma;
-    background-color: pink;
+    background-color: #2ecc71;
 }
 
 aside{
     grid-area: as;
-    background-color:greenyellow;
+    background-color:#2ecc71;
 }
 
 footer{
     grid-area: ft;
-    background-color: blue;
+    background-color: #80dca6;
+}
+
+#cardwrapper{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+}
+
+section{
+    border: 5px solid white;
+    border-style:double;
+    width: 200px;
+    height: 200px;
+    justify-content: space-between;
+}
+
+#s1{
+    background-image: url(../img/maträtt.jpg);
+    background-size: cover;
+    font-weight:bold;
+    color: yellow;
+}
+
+#s2{
+    background-image: url(../img/produkteröverlag.jpg);
+    background-size: cover;
+    font-weight: bold;
+    color: orange;
+}
+
+#s3{
+    background-image: url(../img/ekologisk.jpg);
+    font-weight: bold;
+    color: green;
 }
