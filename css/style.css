@@ -2,49 +2,71 @@
 
 #wrapper{
     display: grid;
-    grid-template-rows: 50px 5px 400px 400px;
-    grid-template-columns: 2fr 1.5fr;
-    grid-gap: 15px;
+    grid-template-rows: 50px 2px 300px 200px;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 10px;
     border: solid 1px black;  
-    width: 90vw;
-    height: 100vh;
+    width: 90%;
     margin: auto;
     grid-template-areas:
     "hd hd"
-    "ma as"
-    "ma as"
+    "ma ma"
+    "ma ma"
+    "card card"
     "ft ft";
 }
 
 header{
+    justify-content: space-between;
     grid-area: hd;
     text-align: left;
+    display:flex;
+}
+
+#välkomen{
+align-self: center;
+}
+
+#omoss{
+    align-self: center;
 }
 
 main{
     grid-area: ma;
     background-color: #2ecc71;
-}
-
-aside{
-    grid-area: as;
-    background-color:#2ecc71;
+    text-align: center;
+    font-style:oblique;
 }
 
 footer{
     grid-area: ft;
-    background-color: #80dca6;
+    background-color: #2ecc71;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    margin: 7px;
+    text-decoration: underline;
 }
 
 #cardwrapper{
+    grid-area: card;
     display: flex;
     flex-wrap:wrap;
-    gap: 10px;
+    gap: 50px;
     margin: auto;
     justify-content: center;
 }
 
+#cardwrapper section:hover{
+    width: 250px;
+    height: 200px;
+    top:3px;
+    left:3x;
+    transition: 0.7s;
+}
+
 section{
+    display:flex;
     border: 5px solid white;
     border-style:double;
     width: 200px;
@@ -53,21 +75,51 @@ section{
 }
 
 #s1{
-    background-image: url(../img/maträtt.jpg);
+    background-image: url(../img/matratt.jpg);
     background-size: cover;
     font-weight:bold;
     color: yellow;
 }
 
 #s2{
-    background-image: url(../img/produkteröverlag.jpg);
+    background-image: url(../img/produkteroverlag.jpg);
     background-size: cover;
     font-weight: bold;
     color: orange;
 }
 
 #s3{
-    background-image: url(../img/ekologisk.jpg);
+    background-image: url(../img/Firefly\ miljo.jpg);
+    background-size: cover;
     font-weight: bold;
-    color: green;
+    color: rgb(255, 255, 255);
+}
+
+#cardwrapper section::backdrop{
+    width: 30px;
+    height: 200px;
+    top:30px;
+    left:40x;
+    transition: 1s;
+}
+
+#s4{
+    background-image: url(../img/matratt.jpg);
+    background-size: cover;
+    font-weight:bold;
+    color: yellow;
+}
+
+#s5{
+    background-image: url(../img/produkteroverlag.jpg);
+    background-size: cover;
+    font-weight: bold;
+    color: orange;
+}
+
+#s6{
+    background-image: url(../img/Firefly\ miljo.jpg);
+    background-size: cover;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
 }
